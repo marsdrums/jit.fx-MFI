@@ -1,0 +1,47 @@
+<jittershader name="default">
+	<description>Default Slab </description>
+	<param name="dummyTex" type="int" default="0" />
+	<param name="texA" type="int" default="1" />
+	<param name="texB" type="int" default="2" />
+	<param name="uv" type="vec2" state="TEXCOORD" />
+	<param name="texMat" type="mat4" state="TEXTURE0_MATRIX" />
+	<param name="multiplexdim" type="int" default="0" />
+	<language name="glsl" version="1.5">
+		<bind param="dummyTex" program="fp" />
+		<bind param="texA" program="fp" />
+		<bind param="texB" program="fp" />
+		<bind param="uv" program="vp" />
+		<bind param="texMat" program="vp" />
+		<bind param="multiplexdim" program="fp" />
+		<program name="vp" type="vertex"  source="fx.vp.unary.glsl" />
+
+<program name="fp" type="fragment"  >
+<![CDATA[
+#version 330 core
+
+layout (location = 0) out vec4 outColor;
+
+//uniform samplerJit0 dummyTex;
+//uniform samplerJit1 texA;
+//uniform samplerJit2 texB;
+
+uniform sampler2DRect dummyTex, texA, texB; //can't make samplerJitN work with this one
+
+uniform int multiplexdim;
+
+in jit_PerVertex {
+	vec2 uv;
+} jit_in;
+
+void main(void) {
+
+	bool choose = mod(floor(jit_in.uv[multiplexdim]), 2) == 0;
+	float fdim = float(multiplexdim);
+	ivec2 iuv = ivec2(floor(jit_in.uv / vec2(2 - fdim, 2 - (1 - fdim))));
+	outColor = texelFetch(choose ? texA : texB, iuv);
+
+}
+]]>
+</program>
+</language>
+</jittershader>
