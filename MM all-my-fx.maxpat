@@ -47,7 +47,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1038.0, 483.0, 182.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "can't access the second texture using the current setup"
 				}
 
@@ -2851,8 +2850,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-135", 0 ],
+					"order" : 1,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"order" : 3,
+					"order" : 4,
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -2868,7 +2875,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"order" : 2,
+					"order" : 3,
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -2876,7 +2883,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -3651,7 +3658,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "brcosa.genjit",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Examples/jitter-examples/gen",
-				"patcherrelativepath" : "../../../../Library/Application Support/Cycling '74/Max 9/Examples/jitter-examples/gen",
+				"patcherrelativepath" : "../../../Library/Application Support/Cycling '74/Max 9/Examples/jitter-examples/gen",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
@@ -3664,105 +3671,105 @@
 , 			{
 				"name" : "jit.fx.an.max.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.an.max",
-				"patcherrelativepath" : "./jit.fx.an.max",
+				"patcherrelativepath" : "./code/jit.fx.an.max",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.an.mean.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.an.mean",
-				"patcherrelativepath" : "./jit.fx.an.mean",
+				"patcherrelativepath" : "./code/jit.fx.an.mean",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.an.min.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.an.min",
-				"patcherrelativepath" : "./jit.fx.an.min",
+				"patcherrelativepath" : "./code/jit.fx.an.min",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.an.normalize.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.an.normalize",
-				"patcherrelativepath" : "./jit.fx.an.normalize",
+				"patcherrelativepath" : "./code/jit.fx.an.normalize",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.brass.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.brass",
-				"patcherrelativepath" : "./jit.fx.brass",
+				"patcherrelativepath" : "./code/jit.fx.brass",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.bsort.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.bsort",
-				"patcherrelativepath" : "./jit.fx.bsort",
+				"patcherrelativepath" : "./code/jit.fx.bsort",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.concat.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.concat",
-				"patcherrelativepath" : "./jit.fx.concat",
+				"patcherrelativepath" : "./code/jit.fx.concat",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.conway.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.conway",
-				"patcherrelativepath" : "./jit.fx.conway",
+				"patcherrelativepath" : "./code/jit.fx.conway",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.dimmap.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.dimmap",
-				"patcherrelativepath" : "./jit.fx.dimmap",
+				"patcherrelativepath" : "./code/jit.fx.dimmap",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.ge.flowfield.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.ge.flowfield",
-				"patcherrelativepath" : "./jit.fx.ge.flowfield",
+				"patcherrelativepath" : "./code/jit.fx.ge.flowfield",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.ge.randlines.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.ge.randlines",
-				"patcherrelativepath" : "./jit.fx.ge.randlines",
+				"patcherrelativepath" : "./code/jit.fx.ge.randlines",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.multiplex.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.multiplex",
-				"patcherrelativepath" : "./jit.fx.multiplex",
+				"patcherrelativepath" : "./code/jit.fx.multiplex",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.rota.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.rota",
-				"patcherrelativepath" : "./jit.fx.rota",
+				"patcherrelativepath" : "./code/jit.fx.rota",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.subtexture.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.subtexture",
-				"patcherrelativepath" : "./jit.fx.subtexture",
+				"patcherrelativepath" : "./code/jit.fx.subtexture",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jit.fx.ti.delay.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.ti.delay",
-				"patcherrelativepath" : "./jit.fx.ti.delay",
+				"patcherrelativepath" : "./code/jit.fx.ti.delay",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
