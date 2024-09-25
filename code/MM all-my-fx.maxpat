@@ -40,6 +40,74 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 0.572549019607843, 0.0, 0.0, 1.0 ],
+					"id" : "obj-137",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1038.0, 483.0, 182.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "can't access the second texture using the current setup"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "concatdim",
+					"displaymode" : 8,
+					"id" : "obj-136",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1065.0, 445.0, 115.0, 22.0 ],
+					"text_width" : 88.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "bypass",
+					"displaymode" : 8,
+					"id" : "obj-135",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 965.0, 445.0, 93.0, 22.0 ],
+					"text_width" : 63.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"filename" : "jit.fx.concat.js",
+					"id" : "obj-134",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_gl_texture" ],
+					"patching_rect" : [ 853.0, 483.0, 176.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "jit.fx.concat",
+					"textfile" : 					{
+						"filename" : "jit.fx.concat.js",
+						"flags" : 0,
+						"embed" : 0,
+						"autowatch" : 1
+					}
+
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"attr" : "boundmode",
 					"displaymode" : 1,
 					"id" : "obj-133",
@@ -580,11 +648,11 @@
 				"box" : 				{
 					"bgcolor" : [ 0.572549019607843, 0.0, 0.0, 1.0 ],
 					"id" : "obj-94",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1038.0, 406.0, 150.0, 47.0 ],
+					"patching_rect" : [ 1038.0, 406.0, 182.0, 33.0 ],
 					"text" : "can't access the second texture using the current setup"
 				}
 
@@ -2674,6 +2742,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"order" : 0,
+					"source" : [ "obj-134", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"order" : 1,
+					"source" : [ "obj-134", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-134", 0 ],
+					"source" : [ "obj-135", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-134", 0 ],
+					"source" : [ "obj-136", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 1 ],
 					"source" : [ "obj-14", 0 ]
 				}
@@ -3361,8 +3459,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-134", 1 ],
+					"order" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 1 ],
-					"order" : 2,
+					"order" : 3,
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -3370,7 +3476,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 1 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -3378,7 +3484,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-89", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -3451,16 +3557,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"order" : 0,
-					"source" : [ "obj-89", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-134", 0 ],
 					"source" : [ "obj-89", 0 ]
 				}
 
@@ -3603,6 +3700,13 @@
 				"name" : "jit.fx.bsort.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.bsort",
 				"patcherrelativepath" : "./jit.fx.bsort",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jit.fx.concat.js",
+				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.concat",
+				"patcherrelativepath" : "./jit.fx.concat",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
