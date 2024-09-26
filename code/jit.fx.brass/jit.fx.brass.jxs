@@ -10,7 +10,7 @@
 		<bind param="texMat" program="vp" />
 		<bind param="width" program="fp" />
     	<bind param="offset" program="fp" />
-		<program name="vp" type="vertex"  source="fx.vp.unary.glsl" />
+		<program name="vp" type="vertex" source="fx.vp.unary.glsl" />
 
 <program name="fp" type="fragment"  >
 <![CDATA[

@@ -22,7 +22,7 @@ var amt = 0.5;
 declareattribute("amt", null, "setamt", 0);
 function setamt(v){ 
 	amt = v;	
-	slab.param("amt", amt)
+	slab.param("amt", amt);
 }
 
 function drawfx(inname){
