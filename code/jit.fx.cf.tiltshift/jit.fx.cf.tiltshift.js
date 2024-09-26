@@ -33,6 +33,13 @@ function setblur_amount(v){
 	blur_amount = v;	
 }
 
+var slope = 1.0;
+declareattribute("slope", null, "setslope", 0);
+function setslope(v){ 
+	slope = v;	
+	slab_mask.param("slope", slope);
+}
+
 var mode = 0;
 declareattribute("mode", null, "setmode", 0);
 function setmode(v){ 

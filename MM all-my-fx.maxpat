@@ -40,6 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"attr" : "slope",
+					"displaymode" : 2,
+					"id" : "obj-187",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 550.0, 2470.0, 111.0, 22.0 ],
+					"text_width" : 49.0
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"attr" : "center",
 					"displaymode" : 4,
 					"id" : "obj-185",
@@ -48,7 +63,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 656.0, 2470.0, 148.0, 22.0 ],
+					"patching_rect" : [ 772.0, 2470.0, 148.0, 22.0 ],
 					"text_width" : 60.0
 				}
 
@@ -63,7 +78,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 555.0, 2470.0, 87.0, 22.0 ],
+					"patching_rect" : [ 671.0, 2470.0, 87.0, 22.0 ],
 					"text_width" : 52.0
 				}
 
@@ -106,12 +121,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_gl_texture" ],
-					"patching_rect" : [ 282.0, 2520.0, 238.0, 22.0 ],
+					"patching_rect" : [ 282.0, 2520.0, 233.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "jit.fx.cf.tiltshift @blur_amount 1.5 @mode 1",
+					"text" : "jit.fx.cf.tiltshift @blur_amount 3. @slope 3.",
 					"textfile" : 					{
 						"filename" : "jit.fx.cf.tiltshift.js",
 						"flags" : 0,
@@ -4383,6 +4398,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-177", 0 ],
 					"source" : [ "obj-185", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-187", 0 ]
 				}
 
 			}
