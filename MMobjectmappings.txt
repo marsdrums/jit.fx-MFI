@@ -30,6 +30,7 @@ max define jit.fx.rota v8 jit.fx.rota.js;
 max define jit.fx.concat v8 jit.fx.concat.js;
 max define jit.fx.lineinterp v8 jit.fx.lineinterp.js;
 max define jit.fx.pixelsorting v8 jit.fx.pixelsorting.js;
+max define jit.fx.camera v8 jit.fx.camera.js;
 
 max define jit.fx.ge.randlines v8 jit.fx.ge.randlines.js;
 max define jit.fx.ge.flowfield v8 jit.fx.ge.flowfield.js;
