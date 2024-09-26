@@ -94,7 +94,7 @@ function drawfx(inname){
 		slab_blur.jit_gl_texture(slab_uvdiff.out_name);
 		slab_blur.activeinput = 0;
 
-		amt = blur_amount*0.07;
+		amt = blur_amount*0.1;
 		
 		for(let i = 0; i < 7; i++){
 
