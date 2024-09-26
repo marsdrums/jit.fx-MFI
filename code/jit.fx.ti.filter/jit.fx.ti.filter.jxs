@@ -24,23 +24,7 @@
 		<bind param="a2" program="fp" />
 		<bind param="b1" program="fp" />
 		<bind param="b2" program="fp" />
-		<program name="vp" type="vertex"  >
-<![CDATA[
-#version 330 core
-
-in vec2 uv;
-uniform mat4 texMat;
-
-out jit_PerVertex {
-	vec2 uv;
-} jit_out;
-
-void main(void) {
-	gl_Position = vec4(uv*2 - 1, 0, 1);
-	jit_out.uv = (texMat * vec4(uv,0,1)).xy;
-}
-]]>
-</program>
+		<program name="vp" type="vertex" source="fx.vp.unary.glsl" />
 
 <program name="fp" type="fragment"  >
 <![CDATA[
