@@ -82,7 +82,7 @@ function setradius(v){
 	shader_vor.param("radius", radius);
 }
 
-var randomness = 0.05;
+var randomness = 0.01;
 declareattribute("randomness", null, "setrandomness", 0);
 function setrandomness(v){ 
 	randomness = v; 

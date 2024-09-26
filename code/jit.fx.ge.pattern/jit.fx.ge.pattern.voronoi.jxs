@@ -6,7 +6,7 @@
   <param name="threshold" type="float" default="0.5" />
   <param name="farClip" type="float" state="FAR_CLIP" />
   <param name="texDim" type="vec2" state="TEXDIM0" />
-  <param name="randomness" type="float" default="0.05" />
+  <param name="randomness" type="float" default="0.01" />
   <param name="num_edges" type="int" default="25" />
   <param name="start_angle" type="float" default="0.0" />
   <param name="complete" type="float" default="1.0" />
