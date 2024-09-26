@@ -59,6 +59,7 @@ in jit_PerVertex {
 vec4 blur5() {
   vec4 color = vec4(0.0);
   vec2 direction = texture(tex1, jit_in.uv).xy;
+  direction.x *= texDim.x / texDim.y;
   direction.y *= -1;
   float randAmount = texelFetch(randTex, ivec2(mod(jit_in.uv, 128) + tile)).w*2;
   vec2 off1 = vec2(1.3333333333333333) * direction * blur_amount * randAmount;

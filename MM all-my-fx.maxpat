@@ -509,18 +509,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-193",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 25.0, 109.0, 22.0 ],
-					"text" : "loadmess unique 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"attr" : "blur_amount",
 					"displaymode" : 2,
 					"id" : "obj-180",
@@ -3300,7 +3288,7 @@
 								"loop" : 1,
 								"content_state" : 								{
 									"loop" : 1,
-									"unique" : 1
+									"unique" : 0
 								}
 
 							}
@@ -4292,13 +4280,6 @@
 					"destination" : [ "obj-5", 0 ],
 					"order" : 0,
 					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-193", 0 ]
 				}
 
 			}
