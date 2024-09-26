@@ -1725,7 +1725,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 695.0, 779.0, 173.0, 22.0 ],
+					"patching_rect" : [ 688.0, 888.0, 125.0, 22.0 ],
 					"text_width" : 69.0
 				}
 
