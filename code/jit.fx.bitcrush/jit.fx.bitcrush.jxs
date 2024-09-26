@@ -14,7 +14,7 @@
 		<bind param="pos" program="vp" />
 		<bind param="uv" program="vp" />
 		<bind param="dithering" program="fp" />
-		<bind param="color_levels" program="fp" />
+		<bind param="color_levels" program="vp" />
 		<program name="vp" type="vertex"  >
 <![CDATA[
 	#version 330 core
@@ -24,14 +24,17 @@
 	out jit_PerVertex {
 		smooth vec2 uv;
 		smooth vec2 uvNorm;
+		flat int cl;
 	} jit_out;
 	uniform mat4 MVP;
 	uniform mat4 textureMatrix0;
+	uniform int color_levels;
 	
 	void main(void) {
 		gl_Position = MVP*vec4(pos, 1.);
 		jit_out.uv = vec2(textureMatrix0*vec4(uv, 0., 1.));
 		jit_out.uvNorm = uv;
+		jit_out.cl = color_levels - 1;
 	}
 ]]>
 </program>
@@ -43,11 +46,12 @@
 	in jit_PerVertex {
 		smooth vec2 uv;
 		smooth vec2 uvNorm;
+		flat int cl;
 	} jit_in;
 	layout (location = 0) out vec4 outCol;
 	
 	uniform sampler2DRect tex0;
-	uniform int dithering, color_levels;
+	uniform int dithering;
 
 
 //====================DITHERING====================//
@@ -91,14 +95,14 @@ vec3 triangleRemap(vec3 n) {
 vec3 Dither_Uniform(vec3 col) {
     float noise = uniformNoise(jit_in.uvNorm);
     noise = noise - 0.5;
-    return col + noise / (color_levels-1);
+    return col + noise / jit_in.cl;
 }
 
 vec3 Dither_Interleaved(vec3 col) {
     // Jimenez 2014, "Next Generation Post-Processing in Call of Duty"
     float noise = interleavedGradientNoise(jit_in.uv);
     noise = noise - 0.5;
-    return col + noise / (color_levels-1);
+    return col + noise / jit_in.cl;
 }
 
 vec3 Dither_Vlachos(vec3 col) {
@@ -106,7 +110,7 @@ vec3 Dither_Vlachos(vec3 col) {
     vec3 noise = vec3(dot(vec2(171.0, 231.0), jit_in.uv));
     noise = fract(noise / vec3(103.0, 71.0, 97.0));
     noise = noise - 0.5;
-    return col.rgb + (noise / (color_levels-1));
+    return col.rgb + (noise / jit_in.cl);
 }
 
 vec3 Dither_Vlachos_TrianglePDF(vec3 col) {
@@ -114,15 +118,15 @@ vec3 Dither_Vlachos_TrianglePDF(vec3 col) {
     vec3 noise = vec3(dot(vec2(171.0, 231.0), jit_in.uv));
     noise = fract(noise / vec3(103.0, 71.0, 97.0));
     noise = triangleRemap(noise);
-    return col + (noise / (color_levels-1));
+    return col + (noise / jit_in.cl);
 }
 
 vec3 Dither_TriangleNoise(vec3 col) {
     // Gjøl 2016, "Banding in Games: A Noisy Rant"
     vec3 noise = vec3(
-        triangleNoise(jit_in.uvNorm         ) / (color_levels-1),
-        triangleNoise(jit_in.uvNorm + 0.1337) / (color_levels-1),
-        triangleNoise(jit_in.uvNorm + 0.3141) / (color_levels-1)
+        triangleNoise(jit_in.uvNorm         ) / jit_in.cl,
+        triangleNoise(jit_in.uvNorm + 0.1337) / jit_in.cl,
+        triangleNoise(jit_in.uvNorm + 0.3141) / jit_in.cl
     );
     return col.rgb + noise;
 }
@@ -137,7 +141,7 @@ void main(void) {
 			col =  	dithering == 4 ? Dither_Vlachos_TrianglePDF(col) 	: col;
 			col =  	dithering == 5 ? Dither_TriangleNoise(col) 			: col;
 
-			col = 	floor(col * color_levels + vec3(0.5)) / color_levels;
+			col = 	floor(col * jit_in.cl + vec3(0.5)) / jit_in.cl;
 
 			outCol = vec4(col, 1.);
 

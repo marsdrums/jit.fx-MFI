@@ -2095,7 +2095,7 @@
 
 							}
  ],
-						"originid" : "pat-6"
+						"originid" : "pat-56"
 					}
 ,
 					"patching_rect" : [ 732.0, 35.0, 61.0, 22.0 ],
@@ -3640,7 +3640,7 @@
 
 			}
  ],
-		"originid" : "pat-2",
+		"originid" : "pat-52",
 		"parameters" : 		{
 			"obj-27" : [ "slider", "slider", 0 ],
 			"parameterbanks" : 			{
