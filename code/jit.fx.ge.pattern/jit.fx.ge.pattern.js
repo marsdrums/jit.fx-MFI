@@ -112,7 +112,7 @@ function setstart_angle(v){
 	shader_vor.param("start_angle", start_angle);
 }
 
-var complete = 0.0;
+var complete = 1.0;
 declareattribute("complete", null, "setcomplete", 0);
 function setcomplete(v){ 
 	complete = Math.max(0, Math.min(1,v));
