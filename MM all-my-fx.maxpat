@@ -379,8 +379,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 286.0, 1620.0, 53.0, 22.0 ],
-					"text" : "jit.fx.hue",
+					"patching_rect" : [ 286.0, 1620.0, 112.0, 22.0 ],
+					"text" : "jit.fx.hue @hue 180",
 					"textfile" : 					{
 						"filename" : "jit.fx.hue.jxs",
 						"flags" : 0,
