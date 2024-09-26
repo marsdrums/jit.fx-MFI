@@ -595,19 +595,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.572549019607843, 0.0, 0.0, 1.0 ],
-					"id" : "obj-137",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1038.0, 483.0, 182.0, 33.0 ],
-					"text" : "can't access the second texture using the current setup"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"attr" : "concatdim",
 					"displaymode" : 8,
 					"id" : "obj-136",
@@ -1195,19 +1182,6 @@
 						"autowatch" : 1
 					}
 
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.572549019607843, 0.0, 0.0, 1.0 ],
-					"id" : "obj-94",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1038.0, 406.0, 182.0, 33.0 ],
-					"text" : "can't access the second texture using the current setup"
 				}
 
 			}

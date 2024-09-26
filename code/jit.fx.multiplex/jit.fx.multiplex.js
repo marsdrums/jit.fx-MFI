@@ -1,7 +1,7 @@
 inlets = 2;
 outlettypes = ["jit_gl_texture"];
 
-include("jit.fx.include.js");
+include("jit.fx.include.nooutput.js");
 
 slab.inputs = 3;
 slab.file = "jit.fx.multiplex.jxs";
@@ -21,22 +21,27 @@ function setmultiplexdim(v){
 }
 setmultiplexdim(multiplexdim);
 
-function drawfx(inname){
+function jit_gl_texture(inname){
 
-	if(inlet == 1){
-		slab.activeinput = 2;
-		slab.jit_gl_texture(inname);
-		post("right", "\n");
-
+	if(bypass == 1){
+		if(inlet == 0){
+			outlet(0, "jit_gl_texture", inname);
+		}
 	} else {
-		slab.activeinput = 1;
-		texA.jit_gl_texture(inname);
-		slab.jit_gl_texture(inname);
+		if(inlet == 1){
+			slab.activeinput = 2;
+			slab.jit_gl_texture(inname);
 
-		texDummy.dim = multiplexdim == 1 ? [texA.dim[0], texA.dim[1]*2] : [texA.dim[0]*2, texA.dim[1]];
-		slab.activeinput = 0;
-		slab.jit_gl_texture(texDummy.name);
-		slab.draw();
+		} else {
+			slab.activeinput = 1;
+			texA.jit_gl_texture(inname);
+			slab.jit_gl_texture(texA.name);
+
+			texDummy.dim = multiplexdim == 1 ? [texA.dim[0], texA.dim[1]*2] : [texA.dim[0]*2, texA.dim[1]];
+			slab.activeinput = 0;
+			slab.jit_gl_texture(texDummy.name);
+			slab.draw();
+		}
+		outlet(0, "jit_gl_texture", slab.out_name);
 	}
-	outlet(0, "jit_gl_texture", slab.out_name);
 }

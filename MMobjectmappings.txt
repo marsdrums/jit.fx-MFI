@@ -16,6 +16,8 @@ max define jit.fx.an.min v8 jit.fx.an.min.js;
 max define jit.fx.an.normalize v8 jit.fx.an.normalize.js;
 
 max define jit.fx.ti.delay v8 jit.fx.ti.delay.js;
+max define jit.fx.ti.warp v8 jit.fx.ti.warp.js;
+
 max define jit.fx.dimmap v8 jit.fx.dimmap.js;
 max define jit.fx.conway v8 jit.fx.conway.js;
 max define jit.fx.bsort v8 jit.fx.bsort.js;
@@ -24,7 +26,10 @@ max define jit.fx.subtexture v8 jit.fx.subtexture.js;
 max define jit.fx.brass v8 jit.fx.brass.js;
 max define jit.fx.rota v8 jit.fx.rota.js;
 max define jit.fx.concat v8 jit.fx.concat.js;
+max define jit.fx.lineinterp v8 jit.fx.lineinterp.js;
+max define jit.fx.pixelsorting v8 jit.fx.pixelsorting.js;
 
 max define jit.fx.ge.randlines v8 jit.fx.ge.randlines.js;
 max define jit.fx.ge.flowfield v8 jit.fx.ge.flowfield.js;
+max define jit.fx.ge.pattern v8 jit.fx.ge.pattern.js;
 

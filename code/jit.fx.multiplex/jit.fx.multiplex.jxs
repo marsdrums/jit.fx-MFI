@@ -20,11 +20,11 @@
 
 layout (location = 0) out vec4 outColor;
 
-//uniform samplerJit0 dummyTex;
-//uniform samplerJit1 texA;
-//uniform samplerJit2 texB;
+uniform samplerJit0 dummyTex;
+uniform samplerJit1 texA;
+uniform samplerJit2 texB;
 
-uniform sampler2DRect dummyTex, texA, texB; //can't make samplerJitN work with this one
+//uniform sampler2DRect dummyTex, texA, texB; //can't make samplerJitN work with this one
 
 uniform int multiplexdim;
 
