@@ -3,10 +3,13 @@ outlettypes = ["jit_gl_texture"];
 
 include("jit.fx.include.js");
 
-slab.file = "jit.fx.an.norm.reduce.h.jxs";
-slab.inputs = 2;
-slab.outputs = 2;
-let slab_hor = slab;
+//slab.file = "jit.fx.an.norm.reduce.h.jxs";
+//fxobs.push(slab);
+
+var slab_hor = new JitterObject("jit.gl.slab", drawto);
+slab_hor.file = "jit.fx.an.norm.reduce.h.jxs";
+slab_hor.inputs = 2;
+slab_hor.outputs = 2;
 fxobs.push(slab_hor);
 
 var slab_ver = new JitterObject("jit.gl.slab", drawto);
