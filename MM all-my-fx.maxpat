@@ -44,7 +44,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "jit_matrix" ],
+					"outlettype" : [ "jit_gl_texture" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -86,13 +86,13 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-2",
+									"id" : "obj-3",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 51.0, 258.0, 257.0, 22.0 ],
-									"text" : "jit.matrix 4 float32 256 256 @planemap 0 0 0 0"
+									"outlettype" : [ "jit_gl_texture", "" ],
+									"patching_rect" : [ 50.0, 268.0, 70.0, 22.0 ],
+									"text" : "jit.gl.texture"
 								}
 
 							}
@@ -103,7 +103,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 114.0, 293.0, 80.0, 60.0 ],
+									"patching_rect" : [ 144.0, 293.0, 80.0, 60.0 ],
 									"sync" : 1
 								}
 
@@ -168,7 +168,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 293.0, 30.0, 30.0 ]
+									"patching_rect" : [ 51.0, 347.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -182,7 +182,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-1", 0 ],
+									"order" : 0,
+									"source" : [ "obj-171", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"order" : 1,
 									"source" : [ "obj-171", 0 ]
 								}
 
@@ -203,22 +212,13 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"order" : 0,
-									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-174", 0 ],
-									"order" : 1,
-									"source" : [ "obj-2", 0 ]
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
  ],
-						"originid" : "pat-141"
+						"originid" : "pat-181"
 					}
 ,
 					"patching_rect" : [ 577.0, 2166.0, 80.0, 22.0 ],
