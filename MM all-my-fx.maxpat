@@ -106,12 +106,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_gl_texture" ],
-					"patching_rect" : [ 282.0, 2520.0, 228.0, 22.0 ],
+					"patching_rect" : [ 282.0, 2520.0, 238.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "jit.fx.cf.tiltshift @blur_amount 3 @mode 1",
+					"text" : "jit.fx.cf.tiltshift @blur_amount 1.5 @mode 1",
 					"textfile" : 					{
 						"filename" : "jit.fx.cf.tiltshift.js",
 						"flags" : 0,
