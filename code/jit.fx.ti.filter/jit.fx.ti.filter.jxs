@@ -1,0 +1,84 @@
+<jittershader name="jit.fx.ti.filter">
+	<param name="inTex0" type="int" default="0" />
+	<param name="inTex1" type="int" default="1" />
+	<param name="inTex2" type="int" default="2" />
+	<param name="inTex3" type="int" default="3" />
+	<param name="inTex4" type="int" default="4" />
+	<param name="uv" type="vec2" state="TEXCOORD" />
+	<param name="texMat" type="mat4" state="TEXTURE0_MATRIX" />
+	<param name="a0" type="float" default="0.9" />
+	<param name="a1" type="float" default="0.1" />
+	<param name="a2" type="float" default="0.1" />
+	<param name="b1" type="float" default="0.2" />
+	<param name="b2" type="float" default="0.2" />
+	<language name="glsl" version="1.5">
+		<bind param="inTex0" program="fp" />
+		<bind param="inTex1" program="fp" />
+		<bind param="inTex2" program="fp" />
+		<bind param="inTex3" program="fp" />
+		<bind param="inTex4" program="fp" />
+		<bind param="uv" program="vp" />
+		<bind param="texMat" program="vp" />
+		<bind param="a0" program="fp" />
+		<bind param="a1" program="fp" />
+		<bind param="a2" program="fp" />
+		<bind param="b1" program="fp" />
+		<bind param="b2" program="fp" />
+		<program name="vp" type="vertex"  >
+<![CDATA[
+#version 330 core
+
+in vec2 uv;
+uniform mat4 texMat;
+
+out jit_PerVertex {
+	vec2 uv;
+} jit_out;
+
+void main(void) {
+	gl_Position = vec4(uv*2 - 1, 0, 1);
+	jit_out.uv = (texMat * vec4(uv,0,1)).xy;
+}
+]]>
+</program>
+
+<program name="fp" type="fragment"  >
+<![CDATA[
+#version 330 core
+
+layout (location = 0) out vec4 out0;
+layout (location = 1) out vec4 out1;
+layout (location = 2) out vec4 out2;
+layout (location = 3) out vec4 out3;
+
+uniform samplerJit0 inTex0;
+uniform samplerJit1 inTex1;
+uniform samplerJit2 inTex2;
+uniform samplerJit3 inTex3;
+uniform samplerJit4 inTex4;
+
+uniform float a0, a1, a2, b1, b2;
+
+in jit_PerVertex {
+	vec2 uv;
+} jit_in;
+
+void main(void) {
+
+	ivec2 iuv = ivec2(jit_in.uv);
+	vec4 in0 = texelFetch(inTex0, iuv);	
+	vec4 in1 = texelFetch(inTex1, iuv); 
+	vec4 in2 = texelFetch(inTex2, iuv); 
+	vec4 in3 = texelFetch(inTex3, iuv);
+	vec4 in4 = texelFetch(inTex4, iuv);
+
+	out0 = in0;
+	out1 = in1;
+	out2 = (in0*a0 + in1*a1 + in2*a2) - (in3*b1 + in4*b2);
+	out3 = in3;
+
+}
+]]>
+</program>
+</language>
+</jittershader>

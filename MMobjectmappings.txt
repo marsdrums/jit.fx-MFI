@@ -17,6 +17,7 @@ max define jit.fx.an.normalize v8 jit.fx.an.normalize.js;
 
 max define jit.fx.ti.delay v8 jit.fx.ti.delay.js;
 max define jit.fx.ti.warp v8 jit.fx.ti.warp.js;
+max define jit.fx.ti.filter v8 jit.fx.ti.filter.js;
 
 max define jit.fx.dimmap v8 jit.fx.dimmap.js;
 max define jit.fx.conway v8 jit.fx.conway.js;
