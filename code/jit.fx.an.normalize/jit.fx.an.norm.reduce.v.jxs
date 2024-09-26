@@ -1,5 +1,4 @@
-<jittershader name="default">
-	<description>Default Slab </description>
+<jittershader name="jit.fx.an.norm.reduce.v">
 	<param name="dummyTex" type="int" default="0" />
 	<param name="texIn" type="int" default="1" />
 	<param name="uv" type="vec2" state="TEXCOORD" />

@@ -1,4 +1,4 @@
-<jittershader name="randlines">
+<jittershader name="jit.fx.ge.randlines">
   <param name="pos" type="vec3" state="POSITION" />
   <param name="tex0" type="int" default="0" />
   <param name="texDim" type="vec2" state="TEXDIM0" />

@@ -1,5 +1,4 @@
-<jittershader name="default">
-	<description>Default Slab </description>
+<jittershader name="jit.fx.multiplex">
 	<param name="dummyTex" type="int" default="0" />
 	<param name="texA" type="int" default="1" />
 	<param name="texB" type="int" default="2" />
