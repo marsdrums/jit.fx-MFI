@@ -23,9 +23,16 @@ function setmax_delay(v){
 }
 
 var delay = 0.0;
+var interp = 1;
+declareattribute("interp", null, "setinterp", 0);
+function setinterp(v){ 
+	interp = v;
+	setdelay(delay);
+}
+
 declareattribute("delay", null, "setdelay", 0);
 function setdelay(v){ 
-	delay = v;	
+	delay = interp == 1 ? v : Math.floor(v);	
 }
 
 function updateDim(){
