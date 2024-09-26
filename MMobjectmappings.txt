@@ -1,5 +1,6 @@
 max define jit.fx.cf.sharpen jit.gl.slab @file jit.fx.cf.sharpen.jxs @inputs 1;
 max define jit.fx.cf.bilateral jit.gl.slab @file jit.fx.cf.bilateral.jxs @inputs 1;
+max define jit.fx.cf.tiltshift v8 jit.fx.cf.tiltshift.js;
 
 max define jit.fx.alphaglue jit.gl.slab @file cc.alphaglue.jxs;
 max define jit.fx.threshold jit.gl.slab @file jit.fx.threshold.jxs @inputs 1;

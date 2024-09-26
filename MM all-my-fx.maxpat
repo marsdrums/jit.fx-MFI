@@ -40,6 +40,90 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"attr" : "center",
+					"displaymode" : 4,
+					"id" : "obj-185",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 656.0, 2470.0, 148.0, 22.0 ],
+					"text_width" : 60.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "mode",
+					"displaymode" : 1,
+					"id" : "obj-184",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 555.0, 2470.0, 87.0, 22.0 ],
+					"text_width" : 52.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "blur_amount",
+					"displaymode" : 2,
+					"id" : "obj-182",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 406.5, 2470.0, 140.0, 22.0 ],
+					"text_width" : 92.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "bypass",
+					"displaymode" : 8,
+					"id" : "obj-181",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 301.0, 2470.0, 93.0, 22.0 ],
+					"text_width" : 63.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"filename" : "jit.fx.cf.tiltshift.js",
+					"id" : "obj-177",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_gl_texture" ],
+					"patching_rect" : [ 282.0, 2520.0, 228.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "jit.fx.cf.tiltshift @blur_amount 3 @mode 1",
+					"textfile" : 					{
+						"filename" : "jit.fx.cf.tiltshift.js",
+						"flags" : 0,
+						"embed" : 0,
+						"autowatch" : 1
+					}
+
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-194",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -4241,6 +4325,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-177", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-178", 0 ]
 				}
@@ -4264,6 +4355,34 @@
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-180", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-181", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-182", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-184", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-185", 0 ]
 				}
 
 			}
@@ -4382,7 +4501,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-177", 0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -4404,7 +4523,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-104", 0 ],
-					"order" : 11,
+					"order" : 12,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4412,7 +4531,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-109", 0 ],
-					"order" : 10,
+					"order" : 11,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4420,7 +4539,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-111", 0 ],
-					"order" : 9,
+					"order" : 10,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4428,7 +4547,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-113", 0 ],
-					"order" : 8,
+					"order" : 9,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4436,7 +4555,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-116", 0 ],
-					"order" : 7,
+					"order" : 8,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4444,7 +4563,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-119", 0 ],
-					"order" : 6,
+					"order" : 7,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4452,7 +4571,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-125", 0 ],
-					"order" : 5,
+					"order" : 6,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4460,7 +4579,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"order" : 23,
+					"order" : 24,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4468,30 +4587,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-137", 0 ],
-					"order" : 1,
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-139", 0 ],
-					"order" : 4,
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-153", 0 ],
-					"order" : 3,
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-161", 0 ],
 					"order" : 2,
 					"source" : [ "obj-29", 0 ]
 				}
@@ -4499,8 +4594,32 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-139", 0 ],
+					"order" : 5,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-153", 0 ],
+					"order" : 4,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-161", 0 ],
+					"order" : 3,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-174", 0 ],
-					"order" : 25,
+					"order" : 26,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4508,6 +4627,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-175", 0 ],
+					"order" : 1,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-181", 0 ],
 					"order" : 0,
 					"source" : [ "obj-29", 0 ]
 				}
@@ -4516,7 +4643,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
-					"order" : 22,
+					"order" : 23,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4524,7 +4651,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
-					"order" : 21,
+					"order" : 22,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4532,7 +4659,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
-					"order" : 20,
+					"order" : 21,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4540,7 +4667,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
-					"order" : 19,
+					"order" : 20,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4548,7 +4675,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-52", 0 ],
-					"order" : 18,
+					"order" : 19,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4556,7 +4683,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-55", 0 ],
-					"order" : 17,
+					"order" : 18,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4564,7 +4691,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
-					"order" : 16,
+					"order" : 17,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4572,7 +4699,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
-					"order" : 15,
+					"order" : 16,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4580,7 +4707,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-78", 0 ],
-					"order" : 14,
+					"order" : 15,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4588,7 +4715,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-84", 0 ],
-					"order" : 13,
+					"order" : 14,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4596,7 +4723,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"order" : 12,
+					"order" : 13,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -4604,7 +4731,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-97", 0 ],
-					"order" : 24,
+					"order" : 25,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -5267,6 +5394,13 @@
 				"name" : "jit.fx.camera.js",
 				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.camera",
 				"patcherrelativepath" : "./code/jit.fx.camera",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jit.fx.cf.tiltshift.js",
+				"bootpath" : "~/Documents/GitHub/jit.fx-MFI/code/jit.fx.cf.tiltshift",
+				"patcherrelativepath" : "./code/jit.fx.cf.tiltshift",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
