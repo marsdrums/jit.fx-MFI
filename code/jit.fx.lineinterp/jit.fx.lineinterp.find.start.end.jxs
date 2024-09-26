@@ -1,4 +1,4 @@
-<jittershader name="randlines">
+<jittershader name="jit.fx.lineinterp.find.start.end">
   <param name="pos" type="vec3" state="POSITION" />
   <param name="tex0" type="int" default="0" />
   <param name="texDim" type="vec2" state="TEXDIM0" />
@@ -53,14 +53,8 @@ vec2 rayExitBox(vec2 origin, vec2 direction) {
     vec2 maxBounds = vec2(1.0, 1.0);
     
     // Calculate intersection times for x and y planes
-    //float tMinX = (minBounds.x - origin.x) / direction.x;
     float tMaxX = (maxBounds.x - origin.x) / direction.x;
-    //float tMinY = (minBounds.y - origin.y) / direction.y;
     float tMaxY = (maxBounds.y - origin.y) / direction.y;
-    
-    // Ensure tMinX <= tMaxX and tMinY <= tMaxY
-    //if (tMinX > tMaxX) swap(tMinX, tMaxX);
-    //if (tMinY > tMaxY) swap(tMinY, tMaxY);
     
     // Find the maximum of the minimum intersection times (where the ray exits the box)
     float tExit = min(tMaxX, tMaxY);
@@ -68,7 +62,6 @@ vec2 rayExitBox(vec2 origin, vec2 direction) {
     // Compute the exit point using the ray equation: P = origin + t * direction
     return origin + tExit * direction;
 }
-
 
 
 void main() {
