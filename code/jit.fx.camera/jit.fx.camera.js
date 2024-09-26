@@ -96,7 +96,7 @@ function drawfx(inname){
 
 		amt = blur_amount*0.1;
 		
-		for(let i = 0; i < 7; i++){
+		for(let i = 0; i < 5; i++){
 
 			tile[0] = 128 * (i % 8);
 			tile[1] = 128 * Math.floor(i / 8);
