@@ -45,6 +45,30 @@ function setdim(v){
 	slab.param("zoom", Math.pow(2, zoom));
 }
 
+var boundmode = 0;
+declareattribute("boundmode", null, "setboundmode", 0);
+function setboundmode(v){ 
+	boundmode = Math.max(0, Math.min(4, v));
+	switch (boundmode) {
+	  case 0:
+	    inTex.wrap = "clamp";
+	    break;
+	  case 1:
+	    inTex.wrap = "repeat";
+	    break;
+	  case 2:
+	    inTex.wrap = "clampedge";
+	    break;
+	  case 3:
+	    inTex.wrap = "clampborder";
+	    break;
+	  case 4:
+	    inTex.wrap = "mirroredrepeat";
+	    break;
+	}
+}
+setboundmode(boundmode);
+
 var blur_amount = 1.0;
 declareattribute("blur_amount", null, "setblur_amount", 0);
 function setblur_amount(v){ 

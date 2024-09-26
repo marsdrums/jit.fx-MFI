@@ -40,6 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"attr" : "boundmode",
+					"displaymode" : 1,
+					"id" : "obj-189",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 925.0, 2365.0, 124.0, 22.0 ],
+					"text_width" : 86.0
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"attr" : "slope",
 					"displaymode" : 2,
 					"id" : "obj-187",
@@ -591,7 +606,7 @@
 
 							}
  ],
-						"originid" : "pat-4"
+						"originid" : "pat-74"
 					}
 ,
 					"patching_rect" : [ 403.0, 2322.0, 287.0, 22.0 ],
@@ -674,12 +689,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_gl_texture" ],
-					"patching_rect" : [ 282.0, 2414.0, 73.0, 22.0 ],
+					"patching_rect" : [ 282.0, 2414.0, 162.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "jit.fx.camera",
+					"text" : "jit.fx.camera @boundmode 4",
 					"textfile" : 					{
 						"filename" : "jit.fx.camera.js",
 						"flags" : 0,
@@ -3193,7 +3208,7 @@
 
 							}
  ],
-						"originid" : "pat-10"
+						"originid" : "pat-78"
 					}
 ,
 					"patching_rect" : [ 732.0, 35.0, 61.0, 22.0 ],
@@ -4410,6 +4425,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-189", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"order" : 1,
 					"source" : [ "obj-19", 0 ]
@@ -5342,7 +5364,7 @@
 
 			}
  ],
-		"originid" : "pat-2",
+		"originid" : "pat-72",
 		"parameters" : 		{
 			"obj-27" : [ "slider", "slider", 0 ],
 			"parameterbanks" : 			{
