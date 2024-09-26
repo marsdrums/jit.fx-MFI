@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 126.0, 103.0, 1156.0, 898.0 ],
+		"rect" : [ 126.0, 100.0, 1156.0, 898.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -248,12 +248,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_gl_texture" ],
-					"patching_rect" : [ 286.0, 1778.0, 54.0, 22.0 ],
+					"patching_rect" : [ 286.0, 1778.0, 381.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "jit.fx.rota",
+					"text" : "jit.fx.rota @theta 0.4 @anchor_x 400 @anchro_y 400 @boundmode 4",
 					"textfile" : 					{
 						"filename" : "jit.fx.rota.js",
 						"flags" : 0,
