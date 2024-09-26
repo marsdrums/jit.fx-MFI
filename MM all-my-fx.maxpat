@@ -924,7 +924,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 286.0, 999.0, 179.0, 22.0 ],
-					"text" : "jit.fx.grain @size 2.17 @amt 0.8",
+					"text" : "jit.fx.grain @size 3.12 @amt 0.5",
 					"textfile" : 					{
 						"filename" : "jit.fx.grain.jxs",
 						"flags" : 0,
